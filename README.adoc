@@ -12,7 +12,7 @@ Mule 3.6.x
 
 == Installation 
 
-To install this connector, first you will need to install the Client used locally since currently it is not being distributed
+To install this connector, first you will need to clone and install the https://github.com/pablocabrera85/marvel-api-client[Marvel API Client] used on your local repository since currently it is not being distributed.
 
 To do that you will need to:
 
