@@ -41,7 +41,28 @@ mvn clean install -Dmarvel.public.key={publicKey} -Dmarvel.private.key={privateK
 
 == Usage
 
-For information about usage our documentation at http://github.com/mulesoft/marvel.
+* To configure it you simple need to create an account at Marvel Developer Portal and configure the connector like this:
++
+[source,xml]
+----
+<marvel:config-type publicKey="${marvel.publicKey}"
+		privateKey="${marvel.privateKey}" name="Marvel" doc:name="Marvel" />
+----
++
+* Then you can either get collections or single items with the following XML
++
+[source,xml]
+----
+<marvel:get config-ref="Marvel" key="character" fetchSize="#[flowVars.fetchSize]" doc:name="Marvel"/>
+
+//OR
+
+<marvel:get-single config-ref="Marvel" key="comic" id="#[flowVars.id]" doc:name="Marvel"/>
+----
+
+NOTE
+====
+The easiest way to configure this is using Anypoint Studio. This are just XML samples of the requests you can make.
 
 == Features included
 
