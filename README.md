@@ -1,2 +1,47 @@
-# marvel-connector
-A simple Anypoint Cloud Connector for mavel api.
+= Marvel Anypoint Connector
+
+This connector allows you to use the http://developer.marvel.com/[Marvel Comic API], the world's greatest comics API!
+
+== Mule supported versions
+
+Mule 3.6.x
+
+== Mavel Comic API supported versions
+
+1.0.0
+
+== Installation 
+
+To install this connector, first you will need to install the Client used locally since currently it is not being distributed
+
+To do that you will need to:
+
+* Clone the marvel client with the following command: 
++
+git clone https://github.com/pablocabrera85/marvel-api-client.git
++
+* From the root directory run:
++
+mvn clean install -DskipTests 
++
+If you have the public and private keys you can run:
++
+mvn clean install -Dmarvel.public.key={publicKey} -Dmarvel.private.key={privateKey}
++
+* After that you can simple compile this connector and install it on your Anypoint Studio
+
+== Usage
+
+For information about usage our documentation at http://github.com/mulesoft/marvel.
+
+== Features included
+
+* In this Connector you will find a processor that supports pagination to iterate through the entire collection of elements.
+
+* Datasense support but using an interesting feature. The ability to describe the input in a different way of the output.
++
+In this API you can only get information form the server, and you can use some query parameters. We used datasense to describe the Objects returned by the API, and the help the users know what query parameters they can provide. 
+
+== Reporting Issues
+
+We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link http://github.com/mulesoft/marvel/issues.

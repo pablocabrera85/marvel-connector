@@ -1,0 +1,7 @@
+<!-- BEGIN_INCLUDE(marvel:get) -->
+	<marvel:get config-ref="Marvel" key="character" fetchSize="#[flowVars.fetchSize]"/>
+<!-- END_INCLUDE(marvel:get) -->
+<!-- BEGIN_INCLUDE(marvel:get-single) -->
+	<marvel:get-single config-ref="Marvel" key="comic" id="999"/>
+<!-- END_INCLUDE(marvel:get-single) -->
+
