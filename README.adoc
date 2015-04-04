@@ -18,15 +18,24 @@ To do that you will need to:
 
 * Clone the marvel client with the following command: 
 +
+[source]
+----
 git clone https://github.com/pablocabrera85/marvel-api-client.git
+----
 +
 * From the root directory run:
 +
+[source]
+----
 mvn clean install -DskipTests 
+----
 +
 If you have the public and private keys you can run:
 +
+[source]
+----
 mvn clean install -Dmarvel.public.key={publicKey} -Dmarvel.private.key={privateKey}
+----
 +
 * After that you can simple compile this connector and install it on your Anypoint Studio
 
